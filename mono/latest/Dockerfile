@@ -1,4 +1,4 @@
-FROM        ghcr.io/parkervcp/yolks:debian
+FROM        ghcr.io/bladestar2105/pterodactyl-yolks:debian
 
 LABEL       author="Torsten Widmann" maintainer="support@goover.de"
 

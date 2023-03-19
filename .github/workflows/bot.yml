@@ -39,7 +39,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
-          password: ${{ secrets.REGISTRY_TOKEN }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - uses: docker/build-push-action@v4
         with:
           context: ./bot/${{ matrix.tag }}
@@ -49,7 +49,7 @@ jobs:
           cache-to: type=local,dest=/tmp/.buildx-cache-new
           push: true
           tags: |
-            ghcr.io/parkervcp/yolks:bot_${{ matrix.tag }}
+            ghcr.io/bladestar2105/pterodactyl-yolks:bot_${{ matrix.tag }}
       - name: Move cache
         run: |
           rm -rf /tmp/.buildx-cache
@@ -73,7 +73,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
-          password: ${{ secrets.REGISTRY_TOKEN }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - uses: docker/build-push-action@v2
         with:
           context: ./bot/${{ matrix.tag }}
@@ -81,4 +81,4 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/parkervcp/yolks:bot_${{ matrix.tag }}
+            ghcr.io/bladestar2105/pterodactyl-yolks:bot_${{ matrix.tag }}

@@ -1,7 +1,7 @@
 # ---------------------------------------
 # Generic Wine image based on Wine stable 
 # ---------------------------------------
-FROM    ghcr.io/parkervcp/yolks:debian
+FROM    ghcr.io/bladestar2105/pterodactyl-yolks:debian
 
 LABEL   author="Michael Parker" maintainer="parker@pterodactyl.io"
 
